@@ -3,7 +3,7 @@
 AddDefaultCharset UTF-8
 Options +FollowSymLinks
 RewriteEngine On
-DirectoryIndex newCreate.php
+DirectoryIndex index.php
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ newCreate.php [L]
+RewriteRule ^ index.php [L]
