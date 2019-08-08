@@ -4,7 +4,7 @@ class  MainController extends BaseController{
 public function index(){
 
 
-require_once "./veiws/main.php";
+require_once "./views/main.php";
 }
 public function registration(){
     if ($this->validator->checkRegistration("users", $_POST["login"], $_POST["email"], $_POST["tel"], $_POST["password"], $_POST["reapetPassword"])) {
@@ -18,9 +18,9 @@ public function registration(){
         $registration = ["name" => $_POST["name"], "surname" => $_POST["surname"], "login" => $_POST["login"], "email" => $_POST["email"], "tel" => $_POST["tel"], "password" => $password_hash, "date" => $today, "admin" => $admin, "statusUser" => "normal"];
         $this->auth->register("users", $registration, $_POST["login"], $_POST["password"], $password_hash);
         if ($_SESSION["user"]["admin"] == 1) {
-            header("Location: /veiws/admin");
+            header("Location: /views/admin");
         } else if ($_SESSION["user"]["admin"] == 0) {
-            header("Location:/veiws/products");
+            header("Location:/views/products");
         }
     } else {
         header("Location: /");

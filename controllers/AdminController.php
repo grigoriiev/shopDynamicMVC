@@ -1,9 +1,4 @@
 <?php
-//namespace Controller;
-
-//require("BaseController.php");
-//use Controller\BaseController;
-
 
 class AdminController extends BaseController{
 
@@ -17,8 +12,8 @@ public function index(){
         exit("<h1>НЕТ ДОСТУПА</h1>");
     }
     $allproduct =$this->qerybuilder->all("product");
-    require_once "./veiws/admin.phtml";
- //   require_once "./veiws/admin-logs.php";
+    require_once "./views/admin.phtml";
+ 
 }
 public function updateDelete_product(){
 

@@ -1,8 +1,5 @@
 <?php
-//namespace Controller;
-//require("BaseController.php");
-//use Controller\BaseController;
-
+/
 class AdminlogsController extends BaseController
 
 
@@ -15,7 +12,7 @@ public function index(){
 
 
     $logsList = $this->auth->getLogs();
-    require_once "./veiws/admin-logs.php";
+    require_once "./views/admin-logs.php";
 }
 
 }

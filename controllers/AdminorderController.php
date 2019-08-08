@@ -1,8 +1,4 @@
 <?php
-//namespace Controller;
-//require("./BaseController.php");
-//use Controller\BaseController;
-
 
 
 class AdminorderController extends BaseController{
@@ -16,15 +12,13 @@ public function index($order){
 
     $orders = $this->qerybuilder->getGroupOne("basket",$order);
     $ordersList = $this->qerybuilder->getOneOrder("basket",$order);
-   // print_r($orders["id"]);
-   // print_r( $ordersList);
-  /// die;
-require_once "./veiws/admin-order.php";
+   
+require_once "./views/admin-order.php";
 }
 public function updateStatus(){
-   // exit("<h1>Говно!!/h1>");
+   
     if (isset($_POST["updateStatusOrders"])) {
-      //  updateStatusOrder
+     
         $data = ["id" => $_POST["id"], "statusBasket" => $_POST["status"]];
         $this->qerybuilder->update("basket", $data);
         header("Location:/veiws/adminorders");
@@ -35,7 +29,7 @@ public function updateStatus(){
         $redirect = $_POST["id"];
         $this->qerybuilder->update("basket", $data);
 
-        header("Location:/veiws/adminorder/$redirect");
+        header("Location:/views/adminorder/$redirect");
     } else {
 
         exit("<h1>ошибка</h1>");
