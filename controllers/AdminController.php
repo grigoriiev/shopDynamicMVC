@@ -45,8 +45,8 @@ public function updateDelete_product(){
 public function add_product(){
 
     $imagePost = $_FILES["imgFile"];
-        $path = "../oor/files/" . $_FILES["imgFile"]["name"];
-        $pathMin = "../oor/minfiles/" . $_FILES["imgFile"]["name"];
+        $path = "../files/" . $_FILES["imgFile"]["name"];
+        $pathMin = "../minfiles/" . $_FILES["imgFile"]["name"];
         $data = ["price" => $_POST["price"], "description" => $_POST["textProduct"], "name" => $_POST["nameProduct"], "path" => $path, "minpath" => $pathMin];
         $dataCheck = ["price" => $_POST["price"], "description" => $_POST["textProduct"], "name" => $_POST["nameProduct"]];
 

@@ -1,7 +1,4 @@
 <?php
-//namespace Controller;
-//require("BaseController.php");
-//use Controller\BaseController;
 
 class AdminusersController extends BaseController{
 public function index(){

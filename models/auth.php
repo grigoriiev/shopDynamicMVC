@@ -1,5 +1,4 @@
 <?php
-//namespace Engine;
 
 class Auth
 {
@@ -114,7 +113,7 @@ class Auth
     {
 
         $user = $this->db->delete("users", $id);
-        //$this->deleteImage($table, $id);
+        
     }
 
     public function  fullName()
